@@ -4,30 +4,32 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Admin Dashboard</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 	<nav class="sidebar">
-		<h1 class="title">Dashboard</h1>
+		<h1 class="title"><img src="assets/report-columns.svg">Dashboard</h1>
 		<ul class="main-links">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Profile</a></li>
-			<li><a href="#">Messages</a></li>
-			<li><a href="#">History</a></li>
-			<li><a href="#">Tasks</a></li>
+			<li class="active"><a href="#"><img src="assets/home.svg">Home</a></li>
+			<li><a href="#"><img src="assets/profile-circle.svg">Profile</a></li>
+			<li><a href="#"><img src="assets/message-text.svg">Messages</a></li>
+			<li><a href="#"><img src="assets/clock.svg">History</a></li>
+			<li><a href="#"><img src="assets/task-list.svg">Tasks</a></li>
 		</ul>
 		<ul class="additional-links">
-			<li><a href="#">Settings</a></li>
-			<li><a href="#">Support</a></li>
+			<li><a href="#"><img src="assets/settings.svg">Settings</a></li>
+			<li><a href="#"><img src="assets/chat-bubble-question.svg">Support</a></li>
 		</ul>
 	</nav>
-
 	<header>
-		<input class="search-bar" type="text" />
-		<button class="notifications-button"></button>
+		<div class="search-bar">
+			<img src="assets/search.svg">
+			<input type="text" />
+		</div>
+		<button class="notifications-button"><img src="assets/bell.svg"></button>
 		<div class="account">
-			<img class="avatar" src="https://avatars.githubusercontent.com/u/189379653" alt="" />
+			<img class="avatar" src="https://avatars.githubusercontent.com/u/189379653" />
 			<p class="name">unknown-symbol</p>
 		</div>
 	</header>
@@ -37,45 +39,81 @@
 			<div class="projects-grid">
 				<div class="project-card">
 					<h3 class="project-title">Something</h3>
-					<div class="project-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores quae
-						eligendi eaque ab earum quibusdam repellat, necessitatibus quasi voluptas, laudantium reiciendis? Magni
-						doloremque quae deleniti sit, nihil voluptatibus aperiam illo.</div>
-					<div class="project-links"><a href="#">github</a></div>
+					<div class="project-description">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores
+						quae eligendi eaque ab earum quibusdam repellat, necessitatibus
+						quasi voluptas, laudantium reiciendis? Magni doloremque quae
+						deleniti sit, nihil voluptatibus aperiam illo.
+					</div>
+					<div class="project-links">
+						<a href="#"><img src="assets/github.svg" alt="GitHub" /></a>
+						<a href="#"><img src="assets/window-tabs.svg" /></a>
+					</div>
 				</div>
 				<div class="project-card">
 					<h3 class="project-title">Something</h3>
-					<div class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit corrupti
-						odio saepe placeat magnam commodi totam vel. Architecto numquam quos quis nostrum placeat nobis, quaerat,
-						itaque laboriosam cumque veniam nulla?</div>
-					<div class="project-links"><a href="#">github</a></div>
+					<div class="project-description">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+						corrupti odio saepe placeat magnam commodi totam vel. Architecto
+						numquam quos quis nostrum placeat nobis, quaerat, itaque
+						laboriosam cumque veniam nulla?
+					</div>
+					<div class="project-links">
+						<a href="#"><img src="assets/github.svg" alt="GitHub" /></a>
+						<a href="#"><img src="assets/window-tabs.svg" /></a>
+					</div>
 				</div>
 				<div class="project-card">
 					<h3 class="project-title">Something</h3>
-					<div class="project-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque corporis,
-						rerum nesciunt velit eaque laborum blanditiis in impedit iure mollitia eos id pariatur, perspiciatis quasi
-						alias placeat aliquam non earum.</div>
-					<div class="project-links"><a href="#">github</a></div>
+					<div class="project-description">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+						corporis, rerum nesciunt velit eaque laborum blanditiis in impedit
+						iure mollitia eos id pariatur, perspiciatis quasi alias placeat
+						aliquam non earum.
+					</div>
+					<div class="project-links">
+						<a href="#"><img src="assets/github.svg" alt="GitHub" /></a>
+						<a href="#"><img src="assets/window-tabs.svg" /></a>
+					</div>
 				</div>
 				<div class="project-card">
 					<h3 class="project-title">Something</h3>
-					<div class="project-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti minus id
-						ex dolor? Praesentium magnam harum molestiae, fugit saepe hic repellat, iure et ab distinctio dicta velit
-						assumenda ratione. Rem.</div>
-					<div class="project-links"><a href="#">github</a></div>
+					<div class="project-description">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+						minus id ex dolor? Praesentium magnam harum molestiae, fugit saepe
+						hic repellat, iure et ab distinctio dicta velit assumenda ratione.
+						Rem.
+					</div>
+					<div class="project-links">
+						<a href="#"><img src="assets/github.svg" alt="GitHub" /></a>
+						<a href="#"><img src="assets/window-tabs.svg" /></a>
+					</div>
 				</div>
 				<div class="project-card">
 					<h3 class="project-title">Something</h3>
-					<div class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur magni
-						laboriosam enim ab qui nam quo impedit dolorum id amet libero corporis, esse quaerat sunt nisi adipisci
-						animi, ducimus doloribus.</div>
-					<div class="project-links"><a href="#">github</a></div>
+					<div class="project-description">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Consequuntur magni laboriosam enim ab qui nam quo impedit dolorum
+						id amet libero corporis, esse quaerat sunt nisi adipisci animi,
+						ducimus doloribus.
+					</div>
+					<div class="project-links">
+						<a href="#"><img src="assets/github.svg" alt="GitHub" /></a>
+						<a href="#"><img src="assets/window-tabs.svg" /></a>
+					</div>
 				</div>
 				<div class="project-card">
 					<h3 class="project-title">Something</h3>
-					<div class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid amet
-						reiciendis voluptates nulla minima obcaecati dignissimos qui! Saepe, voluptatibus at voluptates nesciunt
-						omnis, esse dolorem sit, explicabo neque facere minus?</div>
-					<div class="project-links"><a href="#">github</a></div>
+					<div class="project-description">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+						amet reiciendis voluptates nulla minima obcaecati dignissimos qui!
+						Saepe, voluptatibus at voluptates nesciunt omnis, esse dolorem
+						sit, explicabo neque facere minus?
+					</div>
+					<div class="project-links">
+						<a href="#"><img src="assets/github.svg" alt="GitHub" /></a>
+						<a href="#"><img src="assets/window-tabs.svg" /></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -90,7 +128,7 @@
 						adipisci quo pariatur perspiciatis id.
 					</p>
 				</div>
-				<hr>
+				<hr />
 				<div class="announcement">
 					<h3 class="announcement-title">No title</h3>
 					<p class="announcement-description">
@@ -99,7 +137,7 @@
 						Expedita error accusamus ea ducimus voluptatum assumenda.
 					</p>
 				</div>
-				<hr>
+				<hr />
 				<div class="announcement">
 					<h3 class="announcement-title">Something happened</h3>
 					<p class="announcement-description">

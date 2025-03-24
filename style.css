@@ -6,6 +6,10 @@
   border: none;
   box-sizing: border-box;
 }
+*:focus {
+  border: none;
+  outline: none;
+}
 html {
   width: 100%;
   height: 100%;
@@ -17,7 +21,7 @@ body {
   grid-template-columns: 0fr 1fr;
   grid-template-rows: 0fr 1fr;
   grid-auto-flow: row;
-  background: #f3fbf9;
+  background: #e3ebe9;
   width: 100%;
   height: 100%;
 }
@@ -31,17 +35,29 @@ body {
   gap: 30px;
 }
 .sidebar > .title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding: 20px;
+  font-size: 1.5rem;
+}
+.sidebar > .title img {
+  width: 25px;
+  filter: invert(100%);
 }
 .sidebar > ul {
   display: flex;
   flex-direction: column;
 }
-.sidebar > ul > li {
-  padding: 5px 20px;
+.sidebar > ul > li > a > img {
+  filter: invert(100%);
+  width: 20px;
 }
 .sidebar > ul > li.active {
   background: white;
+}
+.sidebar > ul > li.active > a > img {
+  filter: none;
 }
 .sidebar > ul > li.active > a,
 .sidebar > ul > li.active:hover {
@@ -51,8 +67,13 @@ body {
 }
 .sidebar > ul > li > a {
   color: white;
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  padding: 5px 20px;
   font-weight: 600;
-  font-size: 1.1rem;
+  width: 100%;
+  font-size: 1rem;
 }
 .sidebar > ul > li:hover {
   background: #ffffff30;
@@ -63,25 +84,71 @@ body {
 header {
   grid-column: 2 / 2;
   grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
   background: white;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0px 10px 20px 0px #00000010;
 }
 header > .search-bar {
+  flex: auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+header > .search-bar > img {
+  width: 20px;
+}
+header > .search-bar > input {
   height: 1.5rem;
-  background: aliceblue;
+  width: 100%;
+  border-radius: 10px;
+  background: #e3ebe9;
+}
+header > .notifications-button {
+  background: none;
+  border-radius: 50%;
+  transition: 0.1s;
+  cursor: pointer;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  padding: 5px;
+}
+header > .notifications-button:hover {
+  background: #00000010;
+}
+header > .notifications-button > img {
+  width: 20px;
 }
 header > .account {
-  float: right;
-  gap: 20px;
+  gap: 10px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  justify-content: end;
   align-items: center;
-  font-size: 1.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
   display: inline-flex;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+}
+header > .account:hover {
+  background-color: #00000010;
 }
 header > .account > img {
   border-radius: 50%;
   max-width: 100%;
-  width: 50px;
+  width: 40px;
   object-fit: contain;
   height: fit-content;
 }
@@ -112,9 +179,11 @@ header > .account > img {
   font-size: 0.9rem;
 }
 .project-links {
+  display: flex;
+  gap: 20px;
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 10px;
 }
 .announcements-board,
 .trending-board,
@@ -124,6 +193,11 @@ header > .account > img {
   height: 100%;
   border-radius: 10px;
   padding: 20px;
+}
+.announcement-description,
+.project-description,
+.trending-content {
+  color: #525252;
 }
 h2 {
   margin-bottom: 10px;
@@ -152,26 +226,3 @@ hr {
   border: 1px #f3fbf9 solid;
   border-radius: 5px;
 }
-/* 
-h1,
-h2,
-h3,
-p,
-a,
-.project-description,
-li,
-li > a,
-.project-title {
-  color: #00000000 !important;
-  width: fit-content;
-  background-color: aliceblue;
-}
-.project-title,
-.title,
-h1,
-h2,
-h3,
-.announcement-title,
-.trending-title {
-  background-color: rgba(219, 235, 250, 0.788);
-} */
