@@ -35,6 +35,7 @@ body {
   gap: 30px;
 }
 .sidebar > .title {
+  user-select: none;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -67,6 +68,7 @@ body {
 }
 .sidebar > ul > li > a {
   color: white;
+  user-select: none;
   display: flex;
   gap: 10px;
   align-items: flex-end;
@@ -104,11 +106,15 @@ header > .search-bar > img {
 }
 header > .search-bar > input {
   height: 1.5rem;
-  width: 100%;
+  width: 85%;
+  padding: 0 10px;
+  font-weight: 600;
+  font-size: 1rem;
   border-radius: 10px;
   background: #e3ebe9;
 }
-header > .notifications-button {
+header > .notifications-button,
+.project-links > a {
   background: none;
   border-radius: 50%;
   transition: 0.1s;
@@ -119,7 +125,8 @@ header > .notifications-button {
   width: 30px;
   padding: 5px;
 }
-header > .notifications-button:hover {
+header > .notifications-button:hover,
+.project-links > a:hover {
   background: #00000010;
 }
 header > .notifications-button > img {
@@ -128,6 +135,7 @@ header > .notifications-button > img {
 header > .account {
   flex-grow: 0;
   flex-shrink: 0;
+  user-select: none;
   flex-basis: auto;
   align-items: center;
   font-weight: 600;
@@ -196,7 +204,7 @@ header > .account > img {
 }
 .project-links {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   position: absolute;
   right: 20px;
   bottom: 10px;
@@ -238,7 +246,15 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.trending-content {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 hr {
   border: 1px #f3fbf9 solid;
   border-radius: 5px;
+}
+img {
+  user-select: none;
 }
