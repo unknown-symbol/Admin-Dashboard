@@ -126,24 +126,40 @@ header > .notifications-button > img {
   width: 20px;
 }
 header > .account {
-  gap: 10px;
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
-  justify-content: end;
   align-items: center;
   font-weight: 600;
   font-size: 1rem;
-  overflow: hidden;
+  gap: 10px;
   text-overflow: ellipsis;
   text-wrap: nowrap;
-  display: inline-flex;
-  border-radius: 10px;
+  box-sizing: content-box;
   cursor: pointer;
+  display: flex;
   padding: 5px;
+  transition: 0.1s;
+  position: relative;
 }
-header > .account:hover {
-  background-color: #00000010;
+header > .account > .account-link {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: -5px;
+  opacity: 0;
+  transition: 0.2s;
+  background: #00000040;
+  text-shadow: 2px 2px 2px #000;
+  border-radius: 10px;
+  color: white;
+}
+header > .account:hover > .account-link {
+  display: flex;
+  opacity: 1;
 }
 header > .account > img {
   border-radius: 50%;
